@@ -1,12 +1,11 @@
-NAME = Phonebook
+NAME = Karen
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
 
-SRCS =	Phonebook.cpp	\
-		Contact.cpp		\
-		main.cpp
+SRCS =	main.cpp	\
+		Karen.cpp	\
 
 OBJS		=	$(SRCS:%.cpp=%.o)
 

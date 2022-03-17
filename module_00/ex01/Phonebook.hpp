@@ -18,7 +18,7 @@ class Phonebook
 		// Getter
 		Contact	getContact(int _nbContact);
 		// Setter
-		void	setcontact(Contact contact);
+		void	setContact(Contact contact);
 
 	private:
 		Contact		_contact[8];

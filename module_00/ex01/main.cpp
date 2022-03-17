@@ -26,7 +26,7 @@ void	addcontact(Phonebook *Phonebook) {
 	while (!std::getline(std::cin, str) || str == "")
 		std::cout << "What's his darkest secret? ";
 	contact.setSecret(str);
-	Phonebook->setcontact(contact);
+	Phonebook->setContact(contact);
 	std::cout << std::endl;
 	return;
 }
@@ -43,16 +43,16 @@ void	searchcontact(Phonebook *Phonebook) {
 	int index;
 
 	std::cout << "┌──────────┬──────────┬──────────┬──────────┐" << std::endl;
-	std::cout << "│" << std::setw(10) << std::left << "Index";
-	std::cout << "|" << std::setw(10) << std::left << "First name";
-	std::cout << "|" << std::setw(10) << std::left << "Last name";
-	std::cout << "|" << std::setw(10) << std::left << "Nick name" << "|" << std::endl;
+	std::cout << "│" << std::setw(10) << std::right << "Index";
+	std::cout << "|" << std::setw(10) << std::right << "First name";
+	std::cout << "|" << std::setw(10) << std::right << "Last name";
+	std::cout << "|" << std::setw(10) << std::right << "Nick name" << "|" << std::endl;
 	for (int i = 0; i < Phonebook->getNbContact(); i++) {
 		std::cout << "├──────────┼──────────┼──────────┼──────────┤" << std::endl;
-		std::cout << "|" << std::setw(10) << std::left << i + 1;
-		std::cout << "|" << std::setw(10) << std::left << trunc(Phonebook->getContact(i).getFirstName());
-		std::cout << "|" << std::setw(10) << std::left << trunc(Phonebook->getContact(i).getLastName());
-		std::cout << "|" << std::setw(10) << std::left << trunc(Phonebook->getContact(i).getNickName()) << "|" << std::endl;
+		std::cout << "|" << std::setw(10) << std::right << i + 1;
+		std::cout << "|" << std::setw(10) << std::right << trunc(Phonebook->getContact(i).getFirstName());
+		std::cout << "|" << std::setw(10) << std::right << trunc(Phonebook->getContact(i).getLastName());
+		std::cout << "|" << std::setw(10) << std::right << trunc(Phonebook->getContact(i).getNickName()) << "|" << std::endl;
 	}
 	std::cout << "└──────────┴──────────┴──────────┴──────────┘" << std::endl;
 	if (Phonebook->getNbContact() > 0) {

@@ -20,7 +20,7 @@ int	Phonebook::getNbContact() {
 	return Phonebook::_nbContact;
 }
 
-void	Phonebook::setcontact(Contact contact) {
+void	Phonebook::setContact(Contact contact) {
 
 	if (_nbContact == 8)
 		std::cout << "Sorry, your Phonebook is full." << std::endl;
