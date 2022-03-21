@@ -1,7 +1,8 @@
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
-#include <iostream>
+# include <iostream>
+# include <cmath>
 
 class Fixed {
 
@@ -16,14 +17,23 @@ class Fixed {
 		// Operator overload //
 		Fixed &	operator=(Fixed const & rhs);
 
+		// Constructor //
+		Fixed(int const val);
+		
+		Fixed(float const val);
+
 		// Getter & Setter //
 		int		getRawBits( void ) const;
 		void	setRawBits( int const raw );
+		float	toFloat( void ) const;
+		int		toInt( void ) const;
 
 	private:
 
 		int	_fixedPoint;
 		static int	const _bit = 8;
 };
+
+std::ostream & operator<<(std::ostream & o, Fixed const & rhs);
 
 #endif
